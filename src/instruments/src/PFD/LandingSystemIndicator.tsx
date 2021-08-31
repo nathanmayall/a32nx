@@ -5,7 +5,7 @@ import { LagFilter } from './PFDUtils';
 const filterLocalizerIndicator = new LagFilter(1.5);
 const filterGlideslopeIndicator = new LagFilter(1.5);
 
-export function LandingSystem({ LSButtonPressed, deltaTime }) {
+export const LandingSystem = ({ LSButtonPressed, deltaTime }) => {
     let showVDev = false;
 
     if (!LSButtonPressed) {
@@ -30,7 +30,7 @@ export function LandingSystem({ LSButtonPressed, deltaTime }) {
             )}
         </g>
     );
-}
+};
 
 const LandingSystemInfo = ({ displayed }) => {
     if (!displayed || !getSimVar('NAV HAS LOCALIZER:3', 'Bool')) {
