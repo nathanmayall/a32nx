@@ -114,8 +114,9 @@ class FlyByWireModelClass {
     rtDW_LagFilter_FlyByWire_T sf_LagFilter_d;
     rtDW_RateLimiter_FlyByWire_T sf_RateLimiter_d;
     rtDW_WashoutFilter_FlyByWire_T sf_WashoutFilter_i;
-    rtDW_RateLimiter_FlyByWire_T sf_RateLimiter_j;
+    rtDW_RateLimiter_FlyByWire_T sf_RateLimiter_a0;
     rtDW_RateLimiter_FlyByWire_T sf_RateLimiter_lp;
+    rtDW_LagFilter_FlyByWire_T sf_LagFilter_lj;
     rtDW_LagFilter_FlyByWire_T sf_LagFilter_c;
     rtDW_RateLimiter_FlyByWire_T sf_RateLimiter_gp;
     rtDW_LagFilter_FlyByWire_T sf_LagFilter_pl;
@@ -161,6 +162,7 @@ class FlyByWireModelClass {
     real_T Subsystem1_C1;
     real_T Subsystem3_C1;
     real_T LagFilter_C1_l;
+    real_T LagFilter2_C1;
     real_T LagFilter_C1_d;
     real_T WashoutFilter_C1_i;
     real_T LagFilter_C1_c;
@@ -209,7 +211,7 @@ class FlyByWireModelClass {
     real_T RateLimiterDynamicVariableTs_InitialCondition_i;
     real_T RateLimiterVariableTs_InitialCondition_f;
     real_T RateLimiterVariableTs_InitialCondition_fc;
-    real_T RateLimiterVariableTs2_InitialCondition_l;
+    real_T RateLimiterVariableTs_InitialCondition_j;
     real_T RateLimiterVariableTs_InitialCondition_p;
     real_T RateLimiterVariableTs1_InitialCondition_f;
     real_T RateLimiterDynamicVariableTs_InitialCondition_i4;
@@ -250,7 +252,7 @@ class FlyByWireModelClass {
     real_T RateLimiterVariableTs5_lo;
     real_T RateLimiterVariableTs_lo_fs;
     real_T RateLimiterVariableTs_lo_p;
-    real_T RateLimiterVariableTs2_lo_a;
+    real_T RateLimiterVariableTs_lo_g;
     real_T RateLimiterVariableTs_lo_fw;
     real_T RateLimiterVariableTs1_lo_hd;
     real_T RateLimitereta_lo;
@@ -274,7 +276,7 @@ class FlyByWireModelClass {
     real_T RateLimiterVariableTs5_up;
     real_T RateLimiterVariableTs_up_k;
     real_T RateLimiterVariableTs_up_m;
-    real_T RateLimiterVariableTs2_up_bi;
+    real_T RateLimiterVariableTs_up_ms;
     real_T RateLimiterVariableTs_up_dlj;
     real_T RateLimiterVariableTs1_up_p;
     real_T RateLimitereta_up;
@@ -331,9 +333,6 @@ class FlyByWireModelClass {
     real_T BankAngleProtection1_bp01Data[9];
     real_T Switch2_Threshold_f;
     real_T Switch1_Threshold;
-    real_T Gain3_Gain_k;
-    real_T Saturation3_UpperSat;
-    real_T Saturation3_LowerSat;
     real_T Constant2_Value_c;
     real_T Constant_Value_j;
     real_T Delay_InitialCondition;
@@ -402,8 +401,8 @@ class FlyByWireModelClass {
     real_T uDLookupTable_tableData_d[25];
     real_T uDLookupTable_bp01Data_l[5];
     real_T uDLookupTable_bp02Data[5];
-    real_T Saturation3_UpperSat_e;
-    real_T Saturation3_LowerSat_c;
+    real_T Saturation3_UpperSat;
+    real_T Saturation3_LowerSat;
     real_T PitchRateDemand_tableData[3];
     real_T PitchRateDemand_bp01Data[3];
     real_T Gain3_Gain_p;
@@ -477,11 +476,10 @@ class FlyByWireModelClass {
     real_T Switch3_Threshold;
     real_T Saturation_UpperSat_n;
     real_T Saturation_LowerSat_o;
+    real_T Gain_Gain_a1;
+    real_T Saturation_UpperSat_f;
+    real_T Saturation_LowerSat_f;
     real_T Switch_Threshold_p;
-    real_T PreControlGain_Gain;
-    real_T Gain2_Gain_i;
-    real_T Gain1_Gain_mg;
-    real_T pKp_Gain;
     real_T Constant2_Value_li;
     real_T Gain1_Gain_br;
     real_T Gain1_Gain_cq;
@@ -513,7 +511,7 @@ class FlyByWireModelClass {
     real_T Saturation_UpperSat_eq;
     real_T Saturation_LowerSat_n;
     real_T Saturation_UpperSat_i;
-    real_T Saturation_LowerSat_f;
+    real_T Saturation_LowerSat_fr;
     real_T Constant_Value_f;
     real_T Gaineta_Gain_d;
     real_T Limitereta_UpperSat;
