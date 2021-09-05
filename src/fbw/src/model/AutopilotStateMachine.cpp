@@ -2346,10 +2346,10 @@ void AutopilotStateMachineModelClass::step()
     AutopilotStateMachine_DWork.timeDeltaSpeed10_not_empty = true;
   }
 
-  conditionSoftAlt = ((AutopilotStateMachine_DWork.Delay1_DSTATE.output.mode == vertical_mode_ALT) && ((std::abs
-    (AutopilotStateMachine_U.in.data.H_ind_ft - AutopilotStateMachine_U.in.data.cruise_altitude) < 60.0) &&
-    (AutopilotStateMachine_U.in.input.MACH_mode && AutopilotStateMachine_U.in.input.ATHR_engaged &&
-     (rtb_DataTypeConversion2_f < 4.0))));
+  conditionSoftAlt = ((AutopilotStateMachine_DWork.Delay1_DSTATE.output.mode == vertical_mode_ALT) &&
+                      (AutopilotStateMachine_U.in.data.flight_phase == 3.0) &&
+                      AutopilotStateMachine_U.in.input.MACH_mode && AutopilotStateMachine_U.in.input.ATHR_engaged &&
+                      (rtb_DataTypeConversion2_f < 4.0));
   if ((!conditionSoftAlt) || speedTargetChanged || (!AutopilotStateMachine_DWork.timeConditionSoftAlt_not_empty)) {
     AutopilotStateMachine_DWork.timeConditionSoftAlt = AutopilotStateMachine_U.in.time.simulation_time;
     AutopilotStateMachine_DWork.timeConditionSoftAlt_not_empty = true;
